@@ -1,0 +1,64 @@
+/* style.css */
+body {
+    background-color: #f8f9fa; /* Light grey background */
+}
+
+/* Style for the progress bar container */
+.progress-bar-container {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow */
+  background: linear-gradient(to right, #04111f, #043f7e) !important; /* Bootstrap primary color */
+  color: #fff !important ; /* White text */
+  font-size: 20px; /* Font size */
+  opacity: 0.9; /* Slightly transparent */
+  padding: 10px;
+  margin-bottom: 20px; /* Space below the container */
+  background-color: #f8f9fa; /* Light background color */
+  border-radius: 5px; /* Rounded corners */
+  height: 100px;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+/* Style for the progress bar */
+.progress-bar {
+  background-color: #007bff; /* Bootstrap primary color */
+  width: 0%; /* Initial width */
+  height: 20px; /* Height of the progress bar */
+  transition: width 0.4s ease-in-out; /* Smooth transition for width changes */
+  border-radius: 5px; /* Rounded corners */
+}
+
+/* Style for the results container */
+#scrapingResults {
+  font-size: 20px; /* Font size */
+  background-color: #fff; /* White background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow */
+  padding: 20px; /* Padding inside the results container */
+  border-radius: 5px; /* Rounded corners */
+  margin-top: 20px; /* Space above the container */
+  height: 300px;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+.d-none {
+  display: none !important;
+}
+
+  
+/* Define CSS animation for scrolling */
+@keyframes scroll {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(calc(-100% * var(--count)));
+  }
+}
+
+/* Apply animation to log container */
+.log-container {
+  overflow: hidden;
+  animation: scroll linear infinite;
+  animation-duration: calc(var(--count) * 10s); /* Adjust speed based on the number of messages */
+}
